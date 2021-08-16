@@ -1,165 +1,16 @@
 <?= $this->extend('components/template_landing') ?>
     
 <?= $this->section('content') ?>
-    <!-- Navigation -->
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-light" aria-label="Main navigation">
-        <div class="container">
+	
+<?= $this->include('components/navbar_area'); ?>
 
-            <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html"><img src="<?= base_url() ?>/public/images/logo.svg" alt="alternative"></a> 
+<?= $this->include('components/header_area'); ?>
 
-            <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <!-- <a class="navbar-brand logo-text" href="index.html">Yavin</a> -->
+<?= $this->include('components/counter_area'); ?>
 
-            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav ms-auto navbar-nav-scroll">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#header">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#details">Details</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Drop</a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                            <li><a class="dropdown-item" href="<?= site_url('article') ?>">Article Details</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="<?= site_url('term') ?>">Terms Conditions</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="<?= site_url('privacy') ?>">Privacy Policy</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <span class="nav-item">
-                    <a class="btn-outline-sm" href="#contact">Contact us</a>
-                </span>
-            </div> <!-- end of navbar-collapse -->
-        </div> <!-- end of container -->
-    </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
-
-      
-    <!-- Header -->
-    <header id="header" class="header">
-        <img class="decoration-star" src="<?= base_url() ?>/public/images/decoration-star.svg" alt="alternative">
-        <img class="decoration-star-2" src="<?= base_url() ?>/public/images/decoration-star.svg" alt="alternative">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-xl-5">
-                    <div class="text-container">
-                        <h1 class="h1-large">Beautifying office spaces</h1>
-                        <p class="p-large">Is education residence conveying and sore. Suppose shyness say ten behaved morning had. Any propose assist compliment occasional too reasonably</p>
-                        <a class="btn-solid-lg" href="#introduction">More details</a>
-                        <a class="btn-outline-lg" href="#contact">Contact us</a>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-5 col-xl-7">
-                    <div class="image-container">
-                        <img class="img-fluid" src="<?= base_url() ?>/public/images/header.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </header> <!-- end of header -->
-    <!-- end of header -->
-
-
-    <!-- Statistics -->
-    <div class="counter">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                    <!-- Counter -->
-                    <div class="counter-container">
-                        <div class="counter-cell">
-                            <div data-purecounter-start="0" data-purecounter-end="231" data-purecounter-duration="3" class="purecounter">1</div>
-                            <div class="counter-info">Happy Customers</div>
-                        </div> <!-- end of counter-cell -->
-                        <div class="counter-cell">
-                            <div data-purecounter-start="0" data-purecounter-end="385" data-purecounter-duration="1.5" class="purecounter">1</div>
-                            <div class="counter-info">Issues Solved</div>
-                        </div> <!-- end of counter-cell -->
-                        <div class="counter-cell">
-                            <div data-purecounter-start="0" data-purecounter-end="159" data-purecounter-duration="3" class="purecounter">1</div>
-                            <div class="counter-info">Good Reviews</div>
-                        </div> <!-- end of counter-cell -->
-                        <div class="counter-cell">
-                            <div data-purecounter-start="0" data-purecounter-end="128" data-purecounter-duration="3" class="purecounter">1</div>
-                            <div class="counter-info">Case Studies</div>
-                        </div> <!-- end of counter-cell -->
-                    </div> <!-- end of counter-container -->
-                    <!-- end of counter -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of counter -->
-    <!-- end of statistics -->
-
-
-    <!-- Introduction -->
-    <div id="introduction" class="basic-1 bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-9">
-                    <h2>Creating office spaces is our passion and you can see that in our completed projects</h2>
-                    <p>Unpleasing has ask acceptance partiality alteration understood two. Worth no tiled my at house added. Married he hearing am it totally removal. Remove but suffer wanted his lively length. Moonlight two applauded conveying end direction old principle but. Are expenses distance weddings perceive</p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-1 -->
-    <!-- end of introduction -->
-
-
-    <!-- Details 1 -->
-    <div id="details" class="basic-2">
-        <img class="decoration-star" src="<?= base_url() ?>/public/images/decoration-star.svg" alt="alternative">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-xl-5">
-                    <div class="image-container">
-                        <img class="img-fluid" src="<?= base_url() ?>/public/images/details-1.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6 col-xl-7">
-                    <div class="text-container">
-                        <h2>Office spaces should be unique they don’t need to look the same</h2>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="d-flex">
-                                <i class="fas fa-square"></i>
-                                <div class="flex-grow-1">At every tiled on ye defer do. No attention suspected oh difficult. Fond his say</div>
-                            </li>
-                            <li class="d-flex">
-                                <i class="fas fa-square"></i>
-                                <div class="flex-grow-1">Old meet cold find come whom. The sir park sake bred. Wonder matter now</div>
-                            </li>
-                            <li class="d-flex">
-                                <i class="fas fa-square"></i>
-                                <div class="flex-grow-1">Can estate esteem assure fat roused. Am performed on existence as discourse</div>
-                            </li>
-                            <li class="d-flex">
-                                <i class="fas fa-square"></i>
-                                <div class="flex-grow-1">existence as discourse is. Pleasure friendly at marriage blessing or should</div>
-                            </li>
-                        </ul>
-                        <a class="btn-solid-reg" href="article.html">Get started</a>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-2 -->
-    <!-- end of details 1 -->
+<?= $this->include('components/intro_area'); ?>
+    
+<?= $this->include('components/details1_area'); ?>
 
 
     <!-- Services -->
@@ -264,41 +115,10 @@
     <!-- end of services -->
 
 
-    <!-- Details 2 -->
-    <div class="basic-3">
-        <img class="decoration-star" src="<?= base_url() ?>/public/images/decoration-star.svg" alt="alternative">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-xl-7">
-                    <div class="text-container">
-                        <h2>A beautiful and well organized office space increases productivity</h2>
-                        <p>On it differed repeated wandered required in. Then girl neat why yet knew rose spot. Moreover property we he kindness greatest be oh striking laughter. In me he at collecting affronting principles apartments. Has visitor law attacks pretend you calling own excited painted. Contented attending</p>
-                        <a class="btn-solid-reg" href="article.html">Get started</a>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6 col-xl-5">
-                    <div class="image-container">
-                        <img class="img-fluid" src="<?= base_url() ?>/public/images/details-2.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-3 -->
-    <!-- end of details 2 -->
+<?= $this->include('components/details2_area'); ?>
 
-
-    <!-- Invitation -->
-    <div class="basic-4 bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4>Our team of highly skilled designers and interior construction workers can deliver above your level of expections</h4>
-                    <a class="btn-solid-lg" href="#contact">Get quote</a>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-4 -->
-    <!-- end of invitation -->
+<?= $this->include('components/invitation_area'); ?>
+    
 
 
     <!-- Projects -->
