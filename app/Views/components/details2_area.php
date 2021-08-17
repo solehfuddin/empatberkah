@@ -7,7 +7,7 @@
                     <div class="text-container">
                         <h2><?= $details2_header['title']; ?></h2>
                         <p><?= $details2_header['description']; ?></p>
-                        <a class="btn-solid-reg" href="article.html">Get started</a>
+                        <a class="btn-solid-reg" href="#">Get started</a>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6 col-xl-5">

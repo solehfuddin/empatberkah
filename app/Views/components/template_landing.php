@@ -18,7 +18,7 @@
 	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
     <!-- Webpage Title -->
-    <title>Yavin Webpage Title</title>
+    <title><?= $title['title'] ?></title>
     
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
 	<link href="<?= base_url() ?>/public/css/styles.css" rel="stylesheet">
 	
 	<!-- Favicon  -->
-    <link rel="icon" href="<?= base_url() ?>/public/images/favicon.png">
+    <link rel="icon" href="<?= base_url() . "/public/images/" . $title['image']; ?>">
 </head>
 <body>
 
@@ -41,43 +41,30 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer-col first">
-                        <h6>About Website</h6>
-                        <p class="p-small">He oppose at thrown desire of no. Announcing impression unaffected day his are unreserved indulgence. Him hard find read are you</p>
-                    </div> <!-- end of footer-col -->
+                        <h6><?= $footer['title'] ?></h6>
+                        <p class="p-small"> <?= $footer['description'] ?></p>
+                    </div>
+                    
                     <div class="footer-col second">
+                        <!--
                         <h6>Links</h6>
                         <ul class="list-unstyled li-space-lg p-small">
                             <li>Important: <a href="terms.html">Terms & Conditions</a>, <a href="privacy.html">Privacy Policy</a></li>
                             <li>Useful: <a href="#">Colorpicker</a>, <a href="#">Icon Library</a>, <a href="#">Illustrations</a></li>
                             <li>Menu: <a href="#header">Home</a>, <a href="#details">Details</a>, <a href="#services">Services</a>, <a href="#contact">Contact</a></li>
-                        </ul>
-                    </div> <!-- end of footer-col -->
+                        </ul>  -->
+                    </div>
+                   
                     <div class="footer-col third">
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-instagram fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <p class="p-small">We would love to hear from you <a href="mailto:contact@site.com"><strong>contact@site.com</strong></a></p>
+                        <?php foreach($sosmed as $item): ?>
+                            <span class="fa-stack">
+                                <a href="<?= $item['link']; ?>">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab <?= $item['image']; ?> fa-stack-1x"></i>
+                                </a>
+                            </span>
+                        <?php endforeach ?>
+                        <p class="p-small"><?= $contact['title']; ?> <a href="<?= $contact['link']; ?>"><strong><?= $contact['description']; ?></strong></a></p>
                     </div> <!-- end of footer-col -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -91,15 +78,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © <a href="#your-link">Your name</a></p>
+                    <p class="p-small">Copyright © <a href="#your-link">Empat Berkah Global | 2021</a></p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
 
+            <!--
             <div class="row">
                 <div class="col-lg-12">
                     <p class="p-small">Distributed By <a href="https://themewagon.com/">Themewagon</a></p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
+                </div>
+            </div> -->
         </div> <!-- end of container -->
     </div> <!-- end of copyright --> 
     <!-- end of copyright -->
@@ -116,5 +104,8 @@
     <script src="<?= base_url() ?>/public/js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
     <script src="<?= base_url() ?>/public/js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
     <script src="<?= base_url() ?>/public/js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="<?= base_url() ?>/public/js/function.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

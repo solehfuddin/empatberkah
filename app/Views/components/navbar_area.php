@@ -15,30 +15,30 @@
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ms-auto navbar-nav-scroll">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#header">Home</a>
+                        <a class="nav-link active" aria-current="page" href="<?= site_url('/') . '#header'?>">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#details">Details</a>
+                        <a class="nav-link" href="<?= site_url('/') . '#details'?>">Details</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                        <a class="nav-link" href="<?= site_url('/') . '#services'?>">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link" href="<?= site_url('/') . '#projects'?>">Projects</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Drop</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Info</a>
                         <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                            <li><a class="dropdown-item" href="<?= site_url('article') ?>">Article Details</a></li>
+                          <!--  <li><a class="dropdown-item" href="<?= site_url('informasi/office-space-banking') ?>">Article Details</a></li>
+                            <li><div class="dropdown-divider"></div></li> -->
+                            <li><a class="dropdown-item" href="<?= site_url('informasi/term-conditions') ?>">Terms Conditions</a></li>
                             <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="<?= site_url('term') ?>">Terms Conditions</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="<?= site_url('privacy') ?>">Privacy Policy</a></li>
+                            <li><a class="dropdown-item" href="<?= site_url('informasi/privacy-policy') ?>">Privacy Policy</a></li>
                         </ul>
                     </li>
                 </ul>
                 <span class="nav-item">
-                    <a class="btn-outline-sm" href="#contact">Contact us</a>
+                    <a class="btn-outline-sm" href="<?= site_url('/') . '#contact'?>">Contact us</a>
                 </span>
             </div> <!-- end of navbar-collapse -->
         </div> <!-- end of container -->

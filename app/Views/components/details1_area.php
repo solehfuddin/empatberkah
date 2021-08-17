@@ -19,7 +19,7 @@
 								</li>
 							<?php endforeach ?>
                         </ul>
-                        <a class="btn-solid-reg" href="article.html">Get started</a>
+                        <a class="btn-solid-reg" href="#">Get started</a>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->

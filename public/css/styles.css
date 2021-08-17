@@ -252,6 +252,8 @@ a:hover {
 	padding-bottom: 0.875rem;
 	padding-left: 1.5rem;
 	border: 1px solid #cbcbd1;
+	/* border: 1px solid #6610f2; */
+	/* border-radius: 30px; */
 	border-radius: 30px;
 	background-color: #ffffff;
 	font-size: 0.875rem;
@@ -266,13 +268,15 @@ a:hover {
 
 .form-control-input:focus,
 .form-control-textarea:focus {
-	border: 1px solid #a1a1a1;
+	/* border: 1px solid #a1a1a1; */
+	border: 1px solid #dc3545;
 	outline: none; /* Removes blue border on focus */
 }
 
 .form-control-input:hover,
 .form-control-textarea:hover {
-	border: 1px solid #a1a1a1;
+	/* border: 1px solid #a1a1a1; */
+	border: 1px solid #dc3545;
 }
 
 .form-control-submit-button {
