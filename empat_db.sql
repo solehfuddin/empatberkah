@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 17 Agu 2021 pada 14.43
+-- Waktu pembuatan: 20 Agu 2021 pada 17.18
 -- Versi server: 5.7.32
 -- Versi PHP: 7.4.12
 
@@ -148,6 +148,28 @@ INSERT INTO `tbl_testimoni` (`id_testimoni`, `name`, `perusahaan`, `jabatan`, `i
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `tbl_user`
+--
+
+CREATE TABLE `tbl_user` (
+  `kode_user` varchar(10) NOT NULL,
+  `nama_user` varchar(20) NOT NULL,
+  `email` varchar(40) NOT NULL,
+  `password` varchar(35) NOT NULL,
+  `user_level` int(2) NOT NULL,
+  `kode_otp` varchar(7) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tbl_user`
+--
+
+INSERT INTO `tbl_user` (`kode_user`, `nama_user`, `email`, `password`, `user_level`, `kode_otp`) VALUES
+('USR001', 'solehfuddin', 'solehfuddin@gmail.com', 'e619582d17ff331a0202344341145058', 1, '');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `type_article`
 --
 
@@ -192,6 +214,12 @@ ALTER TABLE `tbl_custom`
 --
 ALTER TABLE `tbl_testimoni`
   ADD PRIMARY KEY (`id_testimoni`);
+
+--
+-- Indeks untuk tabel `tbl_user`
+--
+ALTER TABLE `tbl_user`
+  ADD PRIMARY KEY (`kode_user`);
 
 --
 -- Indeks untuk tabel `type_article`
