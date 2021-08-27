@@ -31,7 +31,6 @@
     <link rel="icon" href="<?= base_url() . "/public/images/" . $title['image']; ?>">
 </head>
 <body>
-
 	<!-- Page content -->
     <?= $this->renderSection('content'); ?>
 

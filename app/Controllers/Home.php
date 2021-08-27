@@ -13,6 +13,7 @@ class Home extends BaseController
 		$testi  = new TestimoniModel();
 		$article= new ArticleModel();
 		$data = [
+			'defaultImg' => $this->defaultImg(),
 			'title' => $custom->where('key', 'title-web')->first(),
 			'navbar' => $custom->where('key', 'navbar-area')->first(),
 			'header' => $custom->where('key', 'header-area')->first(),

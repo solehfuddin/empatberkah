@@ -56,4 +56,8 @@ class BaseController extends Controller
 		// E.g.: $this->session = \Config\Services::session();
 		$this->validation = \Config\Services::validation();
 	}
+	
+	function defaultImg() {
+		return "http://2797-180-250-96-155.ngrok.io/cmsempat/public/images/";
+	}
 }

@@ -12,7 +12,8 @@
                                 
                                 <?php foreach($testimoni as $item): ?>
                                     <div class="swiper-slide">
-                                        <img class="testimonial-image" src="<?= base_url() . "/public/images/" . $item['image']; ?>" alt="alternative">
+                                       <!-- <img class="testimonial-image" src="<?= base_url() . "/public/images/" . $item['image']; ?>" alt="alternative"> -->
+									    <img class="testimonial-image" src="<?= $defaultImg . $item['image']; ?>" alt="alternative">
                                         <p class="testimonial-text"><?= $item['testimoni']; ?></p>
                                         <div class="testimonial-author"><?= $item['name']; ?></div>
                                         <div class="testimonial-position"><?= $item['jabatan']; ?> - <?= $item['perusahaan']; ?></div>
