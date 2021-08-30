@@ -22,7 +22,7 @@
                         <?php foreach($service_item as $item): ?>
                             <div class="card">
                                 <div class="card-icon">
-                                    <span class="fas <?= $item['image']; ?>"></span>
+                                    <span class="fas <?= $item['description']; ?>"></span>
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title"><?= $item['title']; ?></h5>

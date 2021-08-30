@@ -58,6 +58,7 @@ class BaseController extends Controller
 	}
 	
 	function defaultImg() {
-		return "http://2797-180-250-96-155.ngrok.io/cmsempat/public/images/";
+		//return "http://2797-180-250-96-155.ngrok.io/cmsempat/public/images/";
+		return "http://localhost/cmsempat/public/images/";
 	}
 }

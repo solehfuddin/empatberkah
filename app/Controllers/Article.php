@@ -14,16 +14,26 @@ class Article extends BaseController
 		}
 		$custom = new CustomModel();
 		$article= new ArticleModel();
-		$data = [
-			'title' => $custom->where('key', 'title-web')->first(),
-			'navbar' => $custom->where('key', 'navbar-area')->first(),
-			'footer' => $custom->where('key', 'footer-area')->first(),
-			'sosmed' => $custom->where('key', 'sosmed-area')->find(),
-			'contact' => $custom->where('key', 'contact-area')->first(),
-			'article' => $article->where('slug', $slug)->first(),
-		];
+		
+		$cek = $article->where('slug', $slug)->first();
+		
+		if ($cek == null)
+		{
+			return redirect()->to(base_url() . '/');
+		}
+		else
+		{
+			$data = [
+				'title' => $custom->where('key', 'title-web')->first(),
+				'navbar' => $custom->where('key', 'navbar-area')->first(),
+				'footer' => $custom->where('key', 'footer-area')->first(),
+				'sosmed' => $custom->where('key', 'sosmed-area')->find(),
+				'contact' => $custom->where('key', 'contact-area')->first(),
+				'article' => $cek,
+			];
 
-		//dd($data);
-		return view('view_articles', $data);
+			//dd($data);
+			return view('view_articles', $data);
+		}
 	}
 }

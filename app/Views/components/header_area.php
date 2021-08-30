@@ -15,7 +15,8 @@
                 </div> <!-- end of col -->
                 <div class="col-lg-5 col-xl-7">
                     <div class="image-container">
-                        <img class="img-fluid" src="<?= base_url() . "/public/images/" . $header['image']; ?>" alt="alternative">
+                        <!--<img class="img-fluid" src="<?= base_url() . "/public/images/" . $header['image']; ?>" alt="alternative">-->
+						<img class="img-fluid" src="<?= $defaultImg . $header['image']; ?>" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->

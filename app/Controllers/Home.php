@@ -25,12 +25,12 @@ class Home extends BaseController
 			'invitation' => $custom->where('key', 'invitation-area')->first(),
 			'service_h' => $custom->where('key', 'services-area-h')->first(),
 			'service_i' => $custom->where('key', 'services-area-i')->find(),
-			'service_item' => $custom->where('key', 'services-item')->find(),
+			'service_item' => $custom->where('key', 'services-item')->where('is_active', '1')->find(),
 			'footer' => $custom->where('key', 'footer-area')->first(),
 			'sosmed' => $custom->where('key', 'sosmed-area')->find(),
 			'contact' => $custom->where('key', 'contact-area')->first(),
 			'testimoni' => $testi->find(),
-			'article' => $article->where('kode_type', 'TART001')->find(),
+			'article' => $article->orderBy('id_projek', 'DESC')->where('kode_type', 'TART001')->find(),
 		];
 		
 		//dd($data);

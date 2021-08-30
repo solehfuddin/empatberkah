@@ -10,7 +10,8 @@
                 <div class="col-lg-12">
                     <?php foreach($article as $item): ?>
                         <div class="card">
-                            <img class="img-fluid" src="<?= base_url() . "/public/images/" . $item['image']; ?>" alt="alternative">
+                            <!-- <img class="img-fluid" src="<?= base_url() . "/public/images/" . $item['image']; ?>" alt="alternative"> -->
+							<img class="img-fluid" src="<?= $defaultImg . $item['image']; ?>" alt="alternative">
                             <div class="card-body">
                                 <h5 class="card-title"><?= $item['title']; ?></h5>
                                 <p class="card-text"><?= $item['description']; ?> <a class="blue no-line" href="<?= base_url() . "/informasi/" . $item['slug']; ?>">...Read more</a></p>
